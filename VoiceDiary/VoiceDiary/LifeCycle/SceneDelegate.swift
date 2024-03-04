@@ -13,10 +13,39 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+       
+//        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: windowScene)
+//        window?.windowScene = windowScene
+        
+        let tabBarController = UITabBarController()
+        
+        let viewController = UINavigationController(rootViewController: HomeViewController())
+        let listViewController = UINavigationController(rootViewController: ListViewController())
+        let myPageViewController = UINavigationController(rootViewController: MyPageViewController())
+        
+        tabBarController.setViewControllers([viewController, listViewController, myPageViewController], animated: true)
+        
+        tabBarController.tabBar.tintColor = Color.mainColor
+        
+        if let items = tabBarController.tabBar.items {
+//            items[0].selectedImage = UIImage(systemName: "heart.fill")
+            items[0].image = UIImage(systemName: "heart.fill")
+            
+            items[0].title = "홈"
+            
+//            items[1].selectedImage = UIImage(systemName: "mic.fill")
+            items[1].image = UIImage(systemName: "mic.fill")
+            items[1].title = "리스트"
+            
+            items[2].image = UIImage(systemName: "heart.fill")
+            items[2].title = "마이페이지"
+        }
+//        
+        window?.rootViewController = tabBarController
+        window?.makeKeyAndVisible()
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

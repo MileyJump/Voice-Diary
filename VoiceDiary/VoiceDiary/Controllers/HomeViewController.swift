@@ -7,14 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
+    // MARK: - Initial Method
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
-        // Do any additional setup after loading the view.
+        
+        view.backgroundColor = .white
     }
-
-
 }
 
