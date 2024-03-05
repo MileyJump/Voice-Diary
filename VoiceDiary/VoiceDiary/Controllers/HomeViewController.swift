@@ -11,9 +11,12 @@ class HomeViewController: UIViewController {
 
     // MARK: - Initial Method
     
+    let signUpView = SignUpView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view = signUpView
         view.backgroundColor = .white
     }
 }

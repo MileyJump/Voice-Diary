@@ -19,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
 //        window?.windowScene = windowScene
         
+        let signUpViewController = SignUpViewController()
         let tabBarController = UITabBarController()
         
         let viewController = UINavigationController(rootViewController: HomeViewController())
@@ -30,22 +31,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         tabBarController.tabBar.tintColor = Color.mainColor
         
         if let items = tabBarController.tabBar.items {
-//            items[0].selectedImage = UIImage(systemName: "heart.fill")
             items[0].image = UIImage(systemName: "heart.fill")
-            
             items[0].title = "홈"
             
-//            items[1].selectedImage = UIImage(systemName: "mic.fill")
             items[1].image = UIImage(systemName: "mic.fill")
             items[1].title = "리스트"
             
             items[2].image = UIImage(systemName: "heart.fill")
             items[2].title = "마이페이지"
         }
-//        
-        window?.rootViewController = tabBarController
-        window?.makeKeyAndVisible()
         
+//        window?.rootViewController = tabBarController
+        window?.rootViewController = signUpViewController
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
