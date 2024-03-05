@@ -24,7 +24,7 @@ class SignUpViewController: UIViewController {
         }
     
     @objc func signInButtonTapped(){
-        print("sign")
+        print("넘어감?")
         let nicNameVC = NicNameViewController()
         self.navigationController?.pushViewController(nicNameVC, animated: true)
     }

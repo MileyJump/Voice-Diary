@@ -21,6 +21,9 @@
 		B057CAA12B970DEE001FC2DE /* NicNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057CAA02B970DEE001FC2DE /* NicNameView.swift */; };
 		B057CAA32B971042001FC2DE /* NicNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057CAA22B971042001FC2DE /* NicNameViewController.swift */; };
 		B05B6E0B2B96DEEC0019F4F2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B6E0A2B96DEEC0019F4F2 /* SignUpView.swift */; };
+		B0CF0B172B97529F006433D4 /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF0B162B97529F006433D4 /* ConnectionView.swift */; };
+		B0CF0B192B975303006433D4 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF0B182B975303006433D4 /* ConnectionViewController.swift */; };
+		B0CF0B1B2B975999006433D4 /* KCC-Ganpan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0CF0B1A2B975999006433D4 /* KCC-Ganpan.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		B057CAA02B970DEE001FC2DE /* NicNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicNameView.swift; sourceTree = "<group>"; };
 		B057CAA22B971042001FC2DE /* NicNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicNameViewController.swift; sourceTree = "<group>"; };
 		B05B6E0A2B96DEEC0019F4F2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		B0CF0B162B97529F006433D4 /* ConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
+		B0CF0B182B975303006433D4 /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
+		B0CF0B1A2B975999006433D4 /* KCC-Ganpan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KCC-Ganpan.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 			children = (
 				B05B6E0A2B96DEEC0019F4F2 /* SignUpView.swift */,
 				B057CAA02B970DEE001FC2DE /* NicNameView.swift */,
+				B0CF0B162B97529F006433D4 /* ConnectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,6 +119,7 @@
 			children = (
 				B057CA9E2B96F401001FC2DE /* SignUpViewController.swift */,
 				B057CAA22B971042001FC2DE /* NicNameViewController.swift */,
+				B0CF0B182B975303006433D4 /* ConnectionViewController.swift */,
 				B02099DC2B8C7326009CCD97 /* HomeViewController.swift */,
 				B0577D6C2B95BCA900513169 /* MyPageViewController.swift */,
 				B0577D6A2B95BC8F00513169 /* ListViewController.swift */,
@@ -132,6 +140,7 @@
 		B0577D752B95EE8100513169 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				B0CF0B1A2B975999006433D4 /* KCC-Ganpan.ttf */,
 				B0577D6E2B95DDE400513169 /* NameSpace.swift */,
 			);
 			path = Resource;
@@ -204,6 +213,7 @@
 			files = (
 				B02099E52B8C7327009CCD97 /* LaunchScreen.storyboard in Resources */,
 				B02099E22B8C7327009CCD97 /* Assets.xcassets in Resources */,
+				B0CF0B1B2B975999006433D4 /* KCC-Ganpan.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,11 +226,13 @@
 			files = (
 				B057CAA12B970DEE001FC2DE /* NicNameView.swift in Sources */,
 				B02099DD2B8C7326009CCD97 /* HomeViewController.swift in Sources */,
+				B0CF0B172B97529F006433D4 /* ConnectionView.swift in Sources */,
 				B057CAA32B971042001FC2DE /* NicNameViewController.swift in Sources */,
 				B05B6E0B2B96DEEC0019F4F2 /* SignUpView.swift in Sources */,
 				B057CA9F2B96F401001FC2DE /* SignUpViewController.swift in Sources */,
 				B0577D6D2B95BCA900513169 /* MyPageViewController.swift in Sources */,
 				B02099D92B8C7326009CCD97 /* AppDelegate.swift in Sources */,
+				B0CF0B192B975303006433D4 /* ConnectionViewController.swift in Sources */,
 				B02099DB2B8C7326009CCD97 /* SceneDelegate.swift in Sources */,
 				B0577D6F2B95DDE400513169 /* NameSpace.swift in Sources */,
 				B0577D6B2B95BC8F00513169 /* ListViewController.swift in Sources */,

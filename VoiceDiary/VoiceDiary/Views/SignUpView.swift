@@ -18,6 +18,7 @@ class SignUpView: UIView {
         button.configuration?.imagePadding = 10
         button.setTitle("Apple로 로그인하기", for: .normal)
         button.setImage(UIImage(systemName: "applelogo"), for: .normal)
+//        button.titleLabel?.font = UIFont(name: "KCC-Ganpan", size: 18)
         button.imageView?.contentMode = .scaleAspectFill
         button.imageView?.tintColor = .white
         button.tintColor = .black

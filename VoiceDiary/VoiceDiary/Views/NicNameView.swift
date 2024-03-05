@@ -14,16 +14,87 @@ class NicNameView: UIView {
         let label = UILabel()
         label.text = "닉네임을 입력해주세요"
         label.textColor = Color.mainColor
+        label.font = UIFont(name: "KCC-Ganpan", size: 26)
+        label.backgroundColor = .gray
         return label
     }()
     
+    let serveLabel: UILabel = {
+        let label = UILabel()
+        label.text = "언제든 변경이 가능해요"
+        label.textColor = Color.serveLabelColor
+        label.font = UIFont(name: "KCC-Ganpan", size: 16)
+//        label.backgroundColor = .gray
+        return label
+    }()
+    
+    let nickNameTextField: UITextField = {
+        let textField = UITextField()
+        textField.layer.cornerRadius = 8
+        textField.backgroundColor = Color.unTouchedColor
+        textField.font = UIFont(name: "KCC-Ganpan", size: 17)
+        textField.placeholder = "ex) 김민준바보"
+//        textField.textColor = Color.placeholderColor
+//        textField.textColor = .green
+        return textField
+    }()
+    
+    let nextButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("다음", for: .normal)
+        button.titleLabel?.font = UIFont(name: "KCC-Ganpan", size: 17)
+        button.backgroundColor = Color.unTouchedColor
+        button.layer.cornerRadius = 13
+
+        return button
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = Color.mainBackgroundcolor
+        
+        setUpUI()
+        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    func setUpUI(){
+        self.addSubview(nickNameLabel)
+        self.addSubview(serveLabel)
+        self.addSubview(nickNameTextField)
+        self.addSubview(nextButton)
+        
+        nickNameLabel.snp.makeConstraints { make in
+            make.width.equalTo(241)
+            make.height.equalTo(36)
+            make.top.equalTo(120)
+            make.left.equalTo(24)
+            make.right.equalTo(-24)
+        }
+        serveLabel.snp.makeConstraints { make in
+            make.width.equalTo(152)
+            make.height.equalTo(22)
+            make.top.equalTo(160)
+            make.left.equalTo(24)
+            make.right.equalTo(-24)
+        }
+        nickNameTextField.snp.makeConstraints { make in
+            make.width.equalTo(335)
+            make.height.equalTo(48)
+            make.top.equalTo(206)
+            make.left.equalTo(20)
+        }
+        
+        nextButton.snp.makeConstraints { make in
+            make.width.equalTo(327)
+            make.height.equalTo(56)
+            make.top.equalTo(700)
+            make.left.equalTo(24)
+        }
     }
     
 }

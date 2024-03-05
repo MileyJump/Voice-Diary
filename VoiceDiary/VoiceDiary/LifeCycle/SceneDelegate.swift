@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        window?.windowScene = windowScene
         
         let signUpViewController = SignUpViewController()
+        let navigationVC = UINavigationController(rootViewController: signUpViewController)
         let tabBarController = UITabBarController()
         
         let viewController = UINavigationController(rootViewController: HomeViewController())
@@ -42,7 +43,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
 //        window?.rootViewController = tabBarController
-        window?.rootViewController = signUpViewController
+        window?.rootViewController = navigationVC
         window?.makeKeyAndVisible()
     }
 

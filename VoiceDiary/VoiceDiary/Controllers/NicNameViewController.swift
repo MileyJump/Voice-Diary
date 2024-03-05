@@ -14,7 +14,16 @@ class NicNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = nicNameView
+        setUpAddTarget()
     }
     
+    func setUpAddTarget(){
+        nicNameView.nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func nextButtonTapped(){
+        let connectionVC = ConnectionViewController()
+        navigationController?.pushViewController(connectionVC, animated: true)
+    }
     
 }
