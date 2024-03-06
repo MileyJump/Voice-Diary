@@ -48,6 +48,7 @@ extension NicNameViewController: UITextFieldDelegate {
         
         if nicNameView.nickNameTextField.text?.count != 0 {
             nicNameView.nextButton.backgroundColor = UIColor(hexCode: "#604937")
+            nicNameView.nextButton.setTitleColor(.white, for: .normal)
         } else if nicNameView.nickNameTextField.text?.count == 0 {
             nicNameView.nextButton.backgroundColor = UIColor(hexCode: "#F1EAE4")
         }

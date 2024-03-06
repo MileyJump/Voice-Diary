@@ -84,7 +84,7 @@ class ConnectionView: UIView {
     
     let conNectLabel: UILabel = {
         let label = UILabel()
-        label.text = "민경님과 연결됐어요"
+        label.text = ""
         label.font = UIFont(name: "KCC-Ganpan", size: 15)
         //        label.textColor = Color.mainColor
         label.textColor = UIColor(hexCode: "#604937")

@@ -18,6 +18,7 @@ class ConnectionViewController: UIViewController {
         setUpAddTaget()
         
         connectionView.codeInPutTextField.delegate = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,17 +49,19 @@ class ConnectionViewController: UIViewController {
     
     @objc func upLoadButtonTapped(){
         print("connectionVC - upLoadButtonTapped")
+        connectionView.conNectLabel.text = "민경님과 연결됐어요"
+        connectionView.nextButton.backgroundColor = UIColor(hexCode: "#F1EAE4")
     }
 }
 
 extension ConnectionViewController: UITextFieldDelegate {
     
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        if connectionView.codeInPutTextField.text?.count != 0 {
-            connectionView.nextButton.backgroundColor = UIColor(hexCode: "#604937")
-        } else if connectionView.codeInPutTextField.text?.count == 0 {
-            connectionView.nextButton.backgroundColor = UIColor(hexCode: "#F1EAE4")
-        }
+//    func textFieldDidChangeSelection(_ textField: UITextField) {
+//        if connectionView.codeInPutTextField.text?.count != 0 {
+//            connectionView.nextButton.backgroundColor = UIColor(hexCode: "#604937")
+//        } else if connectionView.codeInPutTextField.text?.count == 0 {
+//            connectionView.nextButton.backgroundColor = UIColor(hexCode: "#F1EAE4")
+//        }
         
-    }
+//    }
 }
