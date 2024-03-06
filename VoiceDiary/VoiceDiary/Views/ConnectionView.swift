@@ -15,7 +15,7 @@ class ConnectionView: UIView {
         let label = UILabel()
         label.font = UIFont(name: "KCC-Ganpan", size: 26)
         label.text = "음성 메세지를 교환할\n커플을 연결해주세요"
-        label.textColor = Color.mainColor
+        label.textColor = Color.labelColor
         label.numberOfLines = 2
         return label
     }()

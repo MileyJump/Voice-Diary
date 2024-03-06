@@ -14,8 +14,18 @@ class ConnectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view = connectionView
+        
+        setUpAddTaget()
+    }
+    
+    func setUpAddTaget(){
+        connectionView.nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func nextButtonTapped(){
+        let startVC = StartViewController()
+        navigationController?.pushViewController(startVC, animated: true)
     }
     
 }

@@ -12,6 +12,8 @@
 		B02099DD2B8C7326009CCD97 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02099DC2B8C7326009CCD97 /* HomeViewController.swift */; };
 		B02099E22B8C7327009CCD97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B02099E12B8C7327009CCD97 /* Assets.xcassets */; };
 		B02099E52B8C7327009CCD97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B02099E32B8C7327009CCD97 /* LaunchScreen.storyboard */; };
+		B03167372B9857F200AEEBBB /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03167362B9857F200AEEBBB /* StartView.swift */; };
+		B03167392B9858DD00AEEBBB /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03167382B9858DD00AEEBBB /* StartViewController.swift */; };
 		B0577D6B2B95BC8F00513169 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0577D6A2B95BC8F00513169 /* ListViewController.swift */; };
 		B0577D6D2B95BCA900513169 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0577D6C2B95BCA900513169 /* MyPageViewController.swift */; };
 		B0577D6F2B95DDE400513169 /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0577D6E2B95DDE400513169 /* NameSpace.swift */; };
@@ -34,6 +36,8 @@
 		B02099E12B8C7327009CCD97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B02099E42B8C7327009CCD97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B02099E62B8C7327009CCD97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B03167362B9857F200AEEBBB /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		B03167382B9858DD00AEEBBB /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		B0577D6A2B95BC8F00513169 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		B0577D6C2B95BCA900513169 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		B0577D6E2B95DDE400513169 /* NameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 				B05B6E0A2B96DEEC0019F4F2 /* SignUpView.swift */,
 				B057CAA02B970DEE001FC2DE /* NicNameView.swift */,
 				B0CF0B162B97529F006433D4 /* ConnectionView.swift */,
+				B03167362B9857F200AEEBBB /* StartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 				B057CA9E2B96F401001FC2DE /* SignUpViewController.swift */,
 				B057CAA22B971042001FC2DE /* NicNameViewController.swift */,
 				B0CF0B182B975303006433D4 /* ConnectionViewController.swift */,
+				B03167382B9858DD00AEEBBB /* StartViewController.swift */,
 				B02099DC2B8C7326009CCD97 /* HomeViewController.swift */,
 				B0577D6C2B95BCA900513169 /* MyPageViewController.swift */,
 				B0577D6A2B95BC8F00513169 /* ListViewController.swift */,
@@ -225,10 +231,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B057CAA12B970DEE001FC2DE /* NicNameView.swift in Sources */,
+				B03167392B9858DD00AEEBBB /* StartViewController.swift in Sources */,
 				B02099DD2B8C7326009CCD97 /* HomeViewController.swift in Sources */,
 				B0CF0B172B97529F006433D4 /* ConnectionView.swift in Sources */,
 				B057CAA32B971042001FC2DE /* NicNameViewController.swift in Sources */,
 				B05B6E0B2B96DEEC0019F4F2 /* SignUpView.swift in Sources */,
+				B03167372B9857F200AEEBBB /* StartView.swift in Sources */,
 				B057CA9F2B96F401001FC2DE /* SignUpViewController.swift in Sources */,
 				B0577D6D2B95BCA900513169 /* MyPageViewController.swift in Sources */,
 				B02099D92B8C7326009CCD97 /* AppDelegate.swift in Sources */,
