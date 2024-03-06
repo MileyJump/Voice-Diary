@@ -17,6 +17,7 @@ class SignUpViewController: UIViewController {
         view = signUpView
         
         setUpAddTarget()
+       
     }
     
     func setUpAddTarget() {

@@ -15,8 +15,16 @@ class ConnectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = connectionView
-        
         setUpAddTaget()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setUpNaVi()
+    }
+    
+    func setUpNaVi(){
+        self.navigationItem.hidesBackButton = true
     }
     
     func setUpAddTaget(){

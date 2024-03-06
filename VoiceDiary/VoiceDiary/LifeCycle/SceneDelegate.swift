@@ -29,7 +29,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         tabBarController.setViewControllers([viewController, listViewController, myPageViewController], animated: true)
         
-        tabBarController.tabBar.tintColor = Color.mainColor
+//        tabBarController.tabBar.tintColor = Color.mainColor
+        tabBarController.tabBar.tintColor = UIColor(hexCode: "#604937")
         
         if let items = tabBarController.tabBar.items {
             items[0].image = UIImage(systemName: "heart.fill")

@@ -5,6 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>KCC-Ganpan.ttf</string>
+		<string>KOTRA HOPE.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

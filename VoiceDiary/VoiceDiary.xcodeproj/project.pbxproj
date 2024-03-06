@@ -12,6 +12,7 @@
 		B02099DD2B8C7326009CCD97 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02099DC2B8C7326009CCD97 /* HomeViewController.swift */; };
 		B02099E22B8C7327009CCD97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B02099E12B8C7327009CCD97 /* Assets.xcassets */; };
 		B02099E52B8C7327009CCD97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B02099E32B8C7327009CCD97 /* LaunchScreen.storyboard */; };
+		B02130BE2B98BD1B00978BBA /* KOTRA HOPE.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B02130BD2B98BD1B00978BBA /* KOTRA HOPE.ttf */; };
 		B03167372B9857F200AEEBBB /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03167362B9857F200AEEBBB /* StartView.swift */; };
 		B03167392B9858DD00AEEBBB /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03167382B9858DD00AEEBBB /* StartViewController.swift */; };
 		B0577D6B2B95BC8F00513169 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0577D6A2B95BC8F00513169 /* ListViewController.swift */; };
@@ -36,6 +37,7 @@
 		B02099E12B8C7327009CCD97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B02099E42B8C7327009CCD97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B02099E62B8C7327009CCD97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B02130BD2B98BD1B00978BBA /* KOTRA HOPE.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KOTRA HOPE.ttf"; sourceTree = "<group>"; };
 		B03167362B9857F200AEEBBB /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		B03167382B9858DD00AEEBBB /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		B0577D6A2B95BC8F00513169 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				B0CF0B1A2B975999006433D4 /* KCC-Ganpan.ttf */,
+				B02130BD2B98BD1B00978BBA /* KOTRA HOPE.ttf */,
 				B0577D6E2B95DDE400513169 /* NameSpace.swift */,
 			);
 			path = Resource;
@@ -220,6 +223,7 @@
 				B02099E52B8C7327009CCD97 /* LaunchScreen.storyboard in Resources */,
 				B02099E22B8C7327009CCD97 /* Assets.xcassets in Resources */,
 				B0CF0B1B2B975999006433D4 /* KCC-Ganpan.ttf in Resources */,
+				B02130BE2B98BD1B00978BBA /* KOTRA HOPE.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

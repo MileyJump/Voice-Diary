@@ -13,7 +13,8 @@ class StartView: UIView {
     let startLabel: UILabel = {
         let label = UILabel()
         label.text = "모든 준비가 끝났어요!\n시작해볼까요?"
-        label.textColor = Color.labelColor
+//        label.textColor = Color.labelColor
+        label.textColor = UIColor(hexCode: "#614937")
         label.numberOfLines = 2
         label.font = UIFont(name: "KCC-Ganpan", size: 26)
         return label
@@ -24,7 +25,8 @@ class StartView: UIView {
         let label = UILabel()
         label.text = "하둘셋넷다엿일여홉열하둘"
         label.font = UIFont(name: "KCC-Ganpan", size: 26)
-        label.textColor = Color.mainColor
+//        label.textColor = Color.mainColor
+        label.textColor = UIColor(hexCode: "#604937")
         label.textAlignment = .center
         return label
     }()
@@ -32,7 +34,8 @@ class StartView: UIView {
     let heartImage: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "heart.fill")
-        imageView.tintColor = Color.mainColor
+//        imageView.tintColor = Color.mainColor
+        imageView.tintColor = UIColor(hexCode: "#604937")
         return imageView
     }()
     
@@ -41,7 +44,8 @@ class StartView: UIView {
         label.text = "123456789101"
         label.font = UIFont(name: "KCC-Ganpan", size: 26)
         label.textAlignment = .center
-        label.textColor = Color.mainColor
+//        label.textColor = Color.mainColor
+        label.textColor = UIColor(hexCode: "#604937")
         return label
     }()
     
@@ -49,7 +53,8 @@ class StartView: UIView {
         let button = UIButton()
         button.setTitle("시작하기", for: .normal)
         button.titleLabel?.font = UIFont(name: "KCC-Ganpan", size: 17)
-        button.backgroundColor = Color.mainColor
+//        button.backgroundColor = Color.mainColor
+        button.backgroundColor = UIColor(hexCode: "#604937")
         button.layer.cornerRadius = 13
         return button
     }()

@@ -15,7 +15,8 @@ class ConnectionView: UIView {
         let label = UILabel()
         label.font = UIFont(name: "KCC-Ganpan", size: 26)
         label.text = "음성 메세지를 교환할\n커플을 연결해주세요"
-        label.textColor = Color.labelColor
+//        label.textColor = Color.labelColor
+        label.textColor = UIColor(hexCode: "#614937")
         label.numberOfLines = 2
         return label
     }()
@@ -24,12 +25,14 @@ class ConnectionView: UIView {
         let label = UILabel()
         label.font = UIFont(name: "KCC-Ganpan", size: 16)
         label.text = "STEP 01. 초대 코드 공유"
+        label.textColor = UIColor(hexCode: "#7D7266")
         return label
     }()
     
     let codeLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "KCC-Ganpan", size: 30)
+        label.textColor = UIColor(hexCode: "#614937")
         label.text = "AB123"
         return label
     }()
@@ -37,9 +40,10 @@ class ConnectionView: UIView {
     let codeCopyButton: UIButton = {
         let button = UIButton()
         button.setTitle("코드 복사하기", for: .normal)
-        button.titleLabel?.textColor = Color.buttonTittleColor
-        button.titleLabel?.font = UIFont(name: "KCC-Ganpan", size: 14)
-        button.backgroundColor = Color.buttonColor
+//        button.titleLabel?.textColor = Color.buttonTittleColor
+        button.setTitleColor(UIColor(hexCode: "#604937"), for: .normal)
+        button.titleLabel?.font = UIFont(name: "KOTRA HOPE", size: 14)
+        button.backgroundColor = UIColor(hexCode: "#E6DAD1")
         button.layer.cornerRadius = 12
         return button
     }()
@@ -47,15 +51,18 @@ class ConnectionView: UIView {
     let step2Label: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "KCC-Ganpan", size: 16)
+        label.textColor = UIColor(hexCode: "#7D7266")
         label.text = "STEP 02. 초대 코드 입력"
         return label
     }()
     
     let codeInPutTextField: UITextField = {
         let textField = UITextField()
-        let attributed = NSAttributedString(string: "ex) AB123", attributes: [NSAttributedString.Key.foregroundColor: Color.placeholderColor])
+//        let attributed = NSAttributedString(string: "ex) AB123", attributes: [NSAttributedString.Key.foregroundColor: Color.placeholderColor])
+        let attributed = NSAttributedString(string: "ex) AB123", attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexCode: "#D5C6B9")])
         textField.attributedPlaceholder = attributed
-        textField.backgroundColor = Color.unTouchedColor
+//        textField.backgroundColor = Color.unTouchedColor
+        textField.backgroundColor = UIColor(hexCode: "#F1EAE4")
         textField.layer.cornerRadius = 8
         textField.font = UIFont(name: "KCC-Ganpan", size: 14)
         return textField
@@ -64,9 +71,11 @@ class ConnectionView: UIView {
     let upLoadButton: UIButton = {
         let button = UIButton()
         button.setTitle("등록하기", for: .normal)
-        button.titleLabel?.textColor = Color.buttonTittleColor
-        button.titleLabel?.font = UIFont(name: "KCC-Ganpan", size: 14)
-        button.backgroundColor = Color.buttonColor
+//        button.titleLabel?.textColor = Color.buttonTittleColor
+        button.setTitleColor(UIColor(hexCode: "#604937"), for: .normal)
+        button.titleLabel?.font = UIFont(name: "KOTRA HOPE", size: 14)
+//        button.backgroundColor = Color.buttonColor
+        button.backgroundColor = UIColor(hexCode: "#E6DAD1")
         button.layer.cornerRadius = 12
         return button
     }()
@@ -75,7 +84,8 @@ class ConnectionView: UIView {
         let label = UILabel()
         label.text = "민경님과 연결됐어요"
         label.font = UIFont(name: "KCC-Ganpan", size: 15)
-        label.textColor = Color.mainColor
+//        label.textColor = Color.mainColor
+        label.textColor = UIColor(hexCode: "#604937")
         return label
     }()
     
@@ -83,7 +93,8 @@ class ConnectionView: UIView {
         let button = UIButton()
         button.setTitle("다음", for: .normal)
         button.titleLabel?.font = UIFont(name: "KCC-Ganpan", size: 17)
-        button.backgroundColor = Color.unTouchedColor
+//        button.backgroundColor = Color.unTouchedColor
+        button.backgroundColor = UIColor(hexCode: "#F1EAE4")
         button.layer.cornerRadius = 13
         return button
     }()
@@ -134,8 +145,7 @@ class ConnectionView: UIView {
         }
         
         codeCopyButton.snp.makeConstraints { make in
-            make.width.equalTo(85) // 80 글씨 잘림
-//            make.right.equalTo(-80)
+            make.width.equalTo(80)
             make.height.equalTo(32)
             make.top.equalTo(codeLabel.snp.top).offset(4)
             make.bottom.equalTo(codeLabel.snp.bottom).offset(-5)

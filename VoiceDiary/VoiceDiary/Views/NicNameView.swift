@@ -13,7 +13,8 @@ class NicNameView: UIView {
     let nickNameLabel: UILabel = {
         let label = UILabel()
         label.text = "닉네임을 입력해주세요"
-        label.textColor = Color.mainColor
+//        label.textColor = Color.mainColor
+        label.textColor = UIColor(hexCode: "#614937")
         label.font = UIFont(name: "KCC-Ganpan", size: 26)
 //        label.backgroundColor = .gray
         return label
@@ -22,7 +23,9 @@ class NicNameView: UIView {
     let serveLabel: UILabel = {
         let label = UILabel()
         label.text = "언제든 변경이 가능해요"
-        label.textColor = Color.serveLabelColor
+//         label.textColor = Color.serveLabelColor
+         label.textColor = UIColor(hexCode: "#AC9F92")
+        
         label.font = UIFont(name: "KCC-Ganpan", size: 16)
 //        label.backgroundColor = .gray
         return label
@@ -31,10 +34,12 @@ class NicNameView: UIView {
     let nickNameTextField: UITextField = {
         let textField = UITextField()
         textField.layer.cornerRadius = 8
-        textField.backgroundColor = Color.unTouchedColor
+//        textField.backgroundColor = Color.unTouchedColor
+        textField.backgroundColor = UIColor(hexCode: "#F1EAE4")
         textField.font = UIFont(name: "KCC-Ganpan", size: 17)
         textField.placeholder = "ex) 김민준바보"
-        let attributed = NSAttributedString(string: "ex) 김민준 바보", attributes: [NSAttributedString.Key.foregroundColor: Color.placeholderColor])
+//        let attributed = NSAttributedString(string: "ex) 김민준 바보", attributes: [NSAttributedString.Key.foregroundColor: Color.placeholderColor]) 
+        let attributed = NSAttributedString(string: "ex) 김민준 바보", attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexCode: "#D5C6B9")])
         textField.attributedPlaceholder = attributed
         return textField
     }()
@@ -43,7 +48,9 @@ class NicNameView: UIView {
         let button = UIButton()
         button.setTitle("다음", for: .normal)
         button.titleLabel?.font = UIFont(name: "KCC-Ganpan", size: 17)
-        button.backgroundColor = Color.unTouchedColor
+//        button.backgroundColor = Color.unTouchedColor
+        button.backgroundColor = UIColor(hexCode: "#F1EAE4")
+        
         button.layer.cornerRadius = 13
         return button
     }()
@@ -51,6 +58,7 @@ class NicNameView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = Color.mainBackgroundcolor
+        
         
         setUpUI()
         
