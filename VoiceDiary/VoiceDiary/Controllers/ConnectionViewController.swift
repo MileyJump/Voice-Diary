@@ -16,6 +16,8 @@ class ConnectionViewController: UIViewController {
         super.viewDidLoad()
         view = connectionView
         setUpAddTaget()
+        
+        connectionView.codeInPutTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +31,10 @@ class ConnectionViewController: UIViewController {
     
     func setUpAddTaget(){
         connectionView.nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+        
+        connectionView.codeCopyButton.addTarget(self, action: #selector(codeCopyButtonTapped), for: .touchUpInside)
+        
+        connectionView.upLoadButton.addTarget(self, action: #selector(upLoadButtonTapped), for: .touchUpInside)
     }
     
     @objc func nextButtonTapped(){
@@ -36,4 +42,23 @@ class ConnectionViewController: UIViewController {
         navigationController?.pushViewController(startVC, animated: true)
     }
     
+    @objc func codeCopyButtonTapped(){
+        print("connectionVC - codeCopyButtonTapped")
+    }
+    
+    @objc func upLoadButtonTapped(){
+        print("connectionVC - upLoadButtonTapped")
+    }
+}
+
+extension ConnectionViewController: UITextFieldDelegate {
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        if connectionView.codeInPutTextField.text?.count != 0 {
+            connectionView.nextButton.backgroundColor = UIColor(hexCode: "#604937")
+        } else if connectionView.codeInPutTextField.text?.count == 0 {
+            connectionView.nextButton.backgroundColor = UIColor(hexCode: "#F1EAE4")
+        }
+        
+    }
 }

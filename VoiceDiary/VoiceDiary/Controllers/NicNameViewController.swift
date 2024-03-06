@@ -42,22 +42,17 @@ class NicNameViewController: UIViewController {
 extension NicNameViewController: UITextFieldDelegate {
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        if (nicNameView.nickNameTextField.text != nil) {
-            //            nicNameView.nextButton.backgroundColor = Color.mainColor
-            nicNameView.nextButton.backgroundColor = UIColor(hexCode: "#604937")
-            print("textFieldDidChangeSelection")
+        if let textCount = nicNameView.nickNameTextField.text?.count {
+            nicNameView.countLabel.text = "\(textCount)/12"
         }
+        
+        if nicNameView.nickNameTextField.text?.count != 0 {
+            nicNameView.nextButton.backgroundColor = UIColor(hexCode: "#604937")
+        } else if nicNameView.nickNameTextField.text?.count == 0 {
+            nicNameView.nextButton.backgroundColor = UIColor(hexCode: "#F1EAE4")
+        }
+        
+        print("textFieldDidChangeSelection")
     }
-    //    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-    //        
-    //        
-    //        return false
-    //    }
-    //    
-    //    func textFieldDidEndEditing(_ textField: UITextField) {
-    //        if (nicNameView.nickNameTextField.text != nil) {
-    //            nicNameView.nextButton.backgroundColor = Color.unTouchedColor
-    //            print("textFieldDidEndEditing")
-    //        }
-    //    }
+    
 }

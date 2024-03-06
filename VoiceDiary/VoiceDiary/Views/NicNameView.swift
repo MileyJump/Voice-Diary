@@ -38,10 +38,20 @@ class NicNameView: UIView {
         textField.backgroundColor = UIColor(hexCode: "#F1EAE4")
         textField.font = UIFont(name: "KCC-Ganpan", size: 17)
         textField.placeholder = "ex) 김민준바보"
-//        let attributed = NSAttributedString(string: "ex) 김민준 바보", attributes: [NSAttributedString.Key.foregroundColor: Color.placeholderColor]) 
+        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: 0))
+        textField.leftViewMode = .always
+//        let attributed = NSAttributedString(string: "ex) 김민준 바보", attributes: [NSAttributedString.Key.foregroundColor: Color.placeholderColor])
         let attributed = NSAttributedString(string: "ex) 김민준 바보", attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexCode: "#D5C6B9")])
         textField.attributedPlaceholder = attributed
         return textField
+    }()
+    
+    let countLabel: UILabel = {
+        let label = UILabel()
+        label.text = "0/12"
+        label.font = UIFont(name: "KCC-Ganpan", size: 15)
+        label.textColor = UIColor(hexCode: "#BFB1A5")
+        return label
     }()
     
     let nextButton: UIButton = {
@@ -59,9 +69,7 @@ class NicNameView: UIView {
         super.init(frame: frame)
         self.backgroundColor = Color.mainBackgroundcolor
         
-        
         setUpUI()
-        
     }
     
     required init?(coder: NSCoder) {
@@ -73,6 +81,7 @@ class NicNameView: UIView {
         self.addSubview(nickNameLabel)
         self.addSubview(serveLabel)
         self.addSubview(nickNameTextField)
+        self.addSubview(countLabel)
         self.addSubview(nextButton)
         
         nickNameLabel.snp.makeConstraints { make in
@@ -94,6 +103,16 @@ class NicNameView: UIView {
             make.height.equalTo(48)
             make.top.equalTo(serveLabel.snp.bottom).offset(24)
             make.left.equalTo(20)
+            make.right.equalTo(-20)
+            
+        }
+        
+        countLabel.snp.makeConstraints { make in
+            make.top.equalTo(nickNameTextField.snp.top).offset(13)
+            make.bottom.equalTo(nickNameTextField.snp.bottom).offset(-13)
+            make.right.equalTo(nickNameTextField.snp.right).offset(-12)
+            
+            
         }
         
         nextButton.snp.makeConstraints { make in
