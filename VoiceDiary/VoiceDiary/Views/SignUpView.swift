@@ -12,20 +12,34 @@ class SignUpView: UIView {
     
     let filledConfiguration = UIButton.Configuration.filled()
     
-   
-    lazy var signInButton: UIButton = {
-        let button = UIButton(configuration: filledConfiguration)
-        button.configuration?.imagePadding = 10
-        button.setTitle("Apple로 로그인하기", for: .normal)
-        button.setImage(UIImage(systemName: "applelogo"), for: .normal)
+//   
+//    lazy var signInButton: UIButton = {
+//        let button = UIButton(configuration: filledConfiguration)
+//        button.configuration?.imagePadding = 10
+//        button.setTitle("Apple로 로그인하기", for: .normal)
+//        button.setImage(UIImage(systemName: "applelogo"), for: .normal)
 //        button.titleLabel?.font = UIFont(name: "KCC-Ganpan", size: 18)
-        button.imageView?.contentMode = .scaleAspectFill
-        button.imageView?.tintColor = .white
-        button.tintColor = .black
-        button.layer.cornerRadius = 10
+//        button.imageView?.contentMode = .scaleAspectFill
+//        button.imageView?.tintColor = .white
+//        button.tintColor = .black
+//        button.layer.cornerRadius = 10
+//        return button
+//    }()
+
+    let signInButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "applelogo"), for: .normal)
+        var attString = AttributedString("Apple로 로그인하기")
+          attString.font = UIFont(name: "KCC-Ganpan", size: 18)
+          attString.foregroundColor = .white
+        var configuration = UIButton.Configuration.filled()
+        configuration.attributedTitle = attString
+        configuration.imagePadding = 10
+        configuration.baseBackgroundColor = .black
+        button.configuration = configuration
         return button
     }()
-
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,8 +58,7 @@ class SignUpView: UIView {
             make.centerX.equalToSuperview()
             make.bottom.equalTo(-56)
             make.width.equalTo(327)
-            make.height.equalTo(54) // 버튼의 높이
-            
+            make.height.equalTo(54)
         }
     }
 }

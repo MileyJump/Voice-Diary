@@ -15,7 +15,7 @@ class NicNameView: UIView {
         label.text = "닉네임을 입력해주세요"
         label.textColor = Color.mainColor
         label.font = UIFont(name: "KCC-Ganpan", size: 26)
-        label.backgroundColor = .gray
+//        label.backgroundColor = .gray
         return label
     }()
     
@@ -34,8 +34,8 @@ class NicNameView: UIView {
         textField.backgroundColor = Color.unTouchedColor
         textField.font = UIFont(name: "KCC-Ganpan", size: 17)
         textField.placeholder = "ex) 김민준바보"
-//        textField.textColor = Color.placeholderColor
-//        textField.textColor = .green
+        let attributed = NSAttributedString(string: "ex) 김민준 바보", attributes: [NSAttributedString.Key.foregroundColor: Color.placeholderColor])
+        textField.attributedPlaceholder = attributed
         return textField
     }()
     
@@ -45,7 +45,6 @@ class NicNameView: UIView {
         button.titleLabel?.font = UIFont(name: "KCC-Ganpan", size: 17)
         button.backgroundColor = Color.unTouchedColor
         button.layer.cornerRadius = 13
-
         return button
     }()
     
@@ -73,27 +72,29 @@ class NicNameView: UIView {
             make.height.equalTo(36)
             make.top.equalTo(120)
             make.left.equalTo(24)
-            make.right.equalTo(-24)
+            make.right.equalTo(-24) //글씨가 잘려서 추가!
         }
         serveLabel.snp.makeConstraints { make in
             make.width.equalTo(152)
             make.height.equalTo(22)
-            make.top.equalTo(160)
+            make.top.equalTo(nickNameLabel.snp.bottom).offset(4)
             make.left.equalTo(24)
-            make.right.equalTo(-24)
+            make.right.equalTo(199)
         }
         nickNameTextField.snp.makeConstraints { make in
             make.width.equalTo(335)
             make.height.equalTo(48)
-            make.top.equalTo(206)
+            make.top.equalTo(serveLabel.snp.bottom).offset(24)
             make.left.equalTo(20)
         }
         
         nextButton.snp.makeConstraints { make in
             make.width.equalTo(327)
             make.height.equalTo(56)
-            make.top.equalTo(700)
+//            make.bottom.equalTo(56)
+            make.bottom.equalTo(safeAreaLayoutGuide).offset(-22)
             make.left.equalTo(24)
+            make.right.equalTo(-24)
         }
     }
     

@@ -15,6 +15,8 @@ class NicNameViewController: UIViewController {
         super.viewDidLoad()
         view = nicNameView
         setUpAddTarget()
+        nicNameView.nickNameTextField.delegate = self
+        
     }
     
     func setUpAddTarget(){
@@ -25,5 +27,26 @@ class NicNameViewController: UIViewController {
         let connectionVC = ConnectionViewController()
         navigationController?.pushViewController(connectionVC, animated: true)
     }
+}
+
+extension NicNameViewController: UITextFieldDelegate {
     
+//    func textFieldDidChangeSelection(_ textField: UITextField) {
+//        if (nicNameView.nickNameTextField.text != nil) {
+//            nicNameView.nextButton.backgroundColor = Color.mainColor
+//            print("textFieldDidChangeSelection")
+//        }
+//    }
+//    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+//        
+//        
+//        return false
+//    }
+//    
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        if (nicNameView.nickNameTextField.text != nil) {
+//            nicNameView.nextButton.backgroundColor = Color.unTouchedColor
+//            print("textFieldDidEndEditing")
+//        }
+//    }
 }
