@@ -8,39 +8,37 @@
 import Foundation
 import UIKit
 
-class NickNameView: UIView {
+final class NickNameView: UIView {
     
-    let nickNameLabel: UILabel = {
+    private let nickNameLabel: UILabel = {
         let label = UILabel()
         label.text = "닉네임을 입력해주세요"
-//        label.textColor = Color.mainColor
+        //        label.textColor = Color.mainColor
         label.textColor = UIColor(hexCode: "#614937")
         label.font = UIFont(name: "KCC-Ganpan", size: 26)
-//        label.backgroundColor = .gray
+        //        label.backgroundColor = .gray
         return label
     }()
     
-    let serveLabel: UILabel = {
+    private let serveLabel: UILabel = {
         let label = UILabel()
         label.text = "언제든 변경이 가능해요"
-//         label.textColor = Color.serveLabelColor
-         label.textColor = UIColor(hexCode: "#AC9F92")
+        //         label.textColor = Color.serveLabelColor
+        label.textColor = UIColor(hexCode: "#AC9F92")
         
         label.font = UIFont(name: "KCC-Ganpan", size: 16)
-//        label.backgroundColor = .gray
+        //        label.backgroundColor = .gray
         return label
     }()
     
     let nickNameTextField: UITextField = {
         let textField = UITextField()
         textField.layer.cornerRadius = 8
-//        textField.backgroundColor = Color.unTouchedColor
         textField.backgroundColor = UIColor(hexCode: "#F1EAE4")
         textField.font = UIFont(name: "KCC-Ganpan", size: 17)
         textField.placeholder = "ex) 김민준바보"
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: 0))
         textField.leftViewMode = .always
-//        let attributed = NSAttributedString(string: "ex) 김민준 바보", attributes: [NSAttributedString.Key.foregroundColor: Color.placeholderColor])
         let attributed = NSAttributedString(string: "ex) 김민준 바보", attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexCode: "#D5C6B9")])
         textField.attributedPlaceholder = attributed
         return textField
@@ -58,7 +56,6 @@ class NickNameView: UIView {
         let button = UIButton()
         button.setTitle("다음", for: .normal)
         button.titleLabel?.font = UIFont(name: "KCC-Ganpan", size: 17)
-//        button.backgroundColor = Color.unTouchedColor
         button.backgroundColor = UIColor(hexCode: "#F1EAE4")
         button.setTitleColor(UIColor(hexCode: "#D5C6B9"), for: .normal)
         button.layer.cornerRadius = 13
@@ -78,7 +75,7 @@ class NickNameView: UIView {
     }
     
     
-    func setUpUI(){
+    private func setUpUI(){
         self.addSubview(nickNameLabel)
         self.addSubview(serveLabel)
         self.addSubview(nickNameTextField)
@@ -119,7 +116,7 @@ class NickNameView: UIView {
         nextButton.snp.makeConstraints { make in
             make.width.equalTo(327)
             make.height.equalTo(56)
-//            make.bottom.equalTo(56)
+            //            make.bottom.equalTo(56)
             make.bottom.equalTo(safeAreaLayoutGuide).offset(-22)
             make.left.equalTo(24)
             make.right.equalTo(-24)

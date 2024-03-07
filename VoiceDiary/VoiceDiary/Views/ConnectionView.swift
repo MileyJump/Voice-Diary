@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 import SnapKit
 
-class ConnectionView: UIView {
+final class ConnectionView: UIView {
     
-    let conNectionLabel: UILabel = {
+    private let conNectionLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "KCC-Ganpan", size: 26)
         label.text = "음성 메세지를 교환할\n커플을 연결해주세요"
@@ -21,7 +21,7 @@ class ConnectionView: UIView {
         return label
     }()
     
-    let step1Label: UILabel = {
+    private let step1Label: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "KCC-Ganpan", size: 16)
         label.text = "STEP 01. 초대 코드 공유"
@@ -29,7 +29,7 @@ class ConnectionView: UIView {
         return label
     }()
     
-    let codeLabel: UILabel = {
+    private let codeLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "KCC-Ganpan", size: 30)
         label.textColor = UIColor(hexCode: "#614937")
@@ -48,7 +48,7 @@ class ConnectionView: UIView {
         return button
     }()
     
-    let step2Label: UILabel = {
+    private let step2Label: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "KCC-Ganpan", size: 16)
         label.textColor = UIColor(hexCode: "#7D7266")

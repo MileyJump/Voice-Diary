@@ -24,12 +24,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabBarController = UITabBarController()
         
         let viewController = UINavigationController(rootViewController: HomeViewController())
-        let listViewController = UINavigationController(rootViewController: ListViewController())
+        let listViewController = UINavigationController(rootViewController: ListenViewController())
         let myPageViewController = UINavigationController(rootViewController: MyPageViewController())
         
         tabBarController.setViewControllers([viewController, listViewController, myPageViewController], animated: true)
         
-//        tabBarController.tabBar.tintColor = Color.mainColor
         tabBarController.tabBar.tintColor = UIColor(hexCode: "#604937")
         
         if let items = tabBarController.tabBar.items {
@@ -43,8 +42,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             items[2].title = "마이페이지"
         }
         
-//        window?.rootViewController = tabBarController
-        window?.rootViewController = navigationVC
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
     }
 

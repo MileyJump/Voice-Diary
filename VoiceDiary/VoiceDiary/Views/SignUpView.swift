@@ -8,30 +8,16 @@
 import UIKit
 import SnapKit
 
-class SignUpView: UIView {
+final class SignUpView: UIView {
     
-    let filledConfiguration = UIButton.Configuration.filled()
+    private let filledConfiguration = UIButton.Configuration.filled()
     
-//   
-//    lazy var signInButton: UIButton = {
-//        let button = UIButton(configuration: filledConfiguration)
-//        button.configuration?.imagePadding = 10
-//        button.setTitle("Apple로 로그인하기", for: .normal)
-//        button.setImage(UIImage(systemName: "applelogo"), for: .normal)
-//        button.titleLabel?.font = UIFont(name: "KCC-Ganpan", size: 18)
-//        button.imageView?.contentMode = .scaleAspectFill
-//        button.imageView?.tintColor = .white
-//        button.tintColor = .black
-//        button.layer.cornerRadius = 10
-//        return button
-//    }()
-
     let signInButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "applelogo"), for: .normal)
         var attString = AttributedString("Apple로 로그인하기")
-          attString.font = UIFont(name: "KCC-Ganpan", size: 18)
-          attString.foregroundColor = .white
+        attString.font = UIFont(name: "KCC-Ganpan", size: 18)
+        attString.foregroundColor = .white
         var configuration = UIButton.Configuration.filled()
         configuration.attributedTitle = attString
         configuration.imagePadding = 10
@@ -51,7 +37,7 @@ class SignUpView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setConstraints() {
+    private func setConstraints() {
         self.addSubview(signInButton)
         
         signInButton.snp.makeConstraints { make in

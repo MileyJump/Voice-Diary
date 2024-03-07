@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
-class StartView: UIView {
+final class StartView: UIView {
     
-    let startLabel: UILabel = {
+    private let startLabel: UILabel = {
         let label = UILabel()
         label.text = "모든 준비가 끝났어요!\n시작해볼까요?"
-//        label.textColor = Color.labelColor
+        //        label.textColor = Color.labelColor
         label.textColor = UIColor(hexCode: "#614937")
         label.numberOfLines = 2
         label.font = UIFont(name: "KCC-Ganpan", size: 26)
@@ -21,30 +21,30 @@ class StartView: UIView {
     }()
     
     
-    let myNickNameLabel: UILabel = {
+    private  let myNickNameLabel: UILabel = {
         let label = UILabel()
         label.text = "하둘셋넷다엿일여홉열하둘"
         label.font = UIFont(name: "KCC-Ganpan", size: 26)
-//        label.textColor = Color.mainColor
+        //        label.textColor = Color.mainColor
         label.textColor = UIColor(hexCode: "#604937")
         label.textAlignment = .center
         return label
     }()
     
-    let heartImage: UIImageView = {
+    private let heartImage: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "heart.fill")
-//        imageView.tintColor = Color.mainColor
+        //        imageView.tintColor = Color.mainColor
         imageView.tintColor = UIColor(hexCode: "#604937")
         return imageView
     }()
     
-    let coupleNickNameLabel: UILabel = {
+    private  let coupleNickNameLabel: UILabel = {
         let label = UILabel()
         label.text = "123456789101"
         label.font = UIFont(name: "KCC-Ganpan", size: 26)
         label.textAlignment = .center
-//        label.textColor = Color.mainColor
+        //        label.textColor = Color.mainColor
         label.textColor = UIColor(hexCode: "#604937")
         return label
     }()
@@ -53,7 +53,7 @@ class StartView: UIView {
         let button = UIButton()
         button.setTitle("시작하기", for: .normal)
         button.titleLabel?.font = UIFont(name: "KCC-Ganpan", size: 17)
-//        button.backgroundColor = Color.mainColor
+        //        button.backgroundColor = Color.mainColor
         button.backgroundColor = UIColor(hexCode: "#604937")
         button.layer.cornerRadius = 13
         return button
@@ -70,7 +70,7 @@ class StartView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setUpUI() {
+    private    func setUpUI() {
         self.addSubview(startLabel)
         self.addSubview(myNickNameLabel)
         self.addSubview(heartImage)
@@ -81,7 +81,7 @@ class StartView: UIView {
             make.top.equalTo(120)
             make.left.equalTo(24)
             make.right.equalTo(-24) // 글자 잘려서 오른쪽 값 줌
-//            make.width.equalTo(233) // 글자 잘림
+            //            make.width.equalTo(233) // 글자 잘림
             make.height.equalTo(72)
         }
         

@@ -11,13 +11,24 @@ class HomeViewController: UIViewController {
 
     // MARK: - Initial Method
     
-    let signUpView = SignUpView()
+    let homeView = HomeView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view = signUpView
-        view.backgroundColor = .white
+        view = homeView
+
+        setUpAddTarget()
     }
+    
+    func setUpAddTarget(){
+        homeView.listenButton.addTarget(self, action: #selector(listenButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func listenButtonTapped(){
+        let listenVC = ListenViewController()
+        
+        navigationController?.pushViewController(listenVC, animated: true)
+    }
+    
 }
 
