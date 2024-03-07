@@ -21,7 +21,7 @@ class StartView: UIView {
     }()
     
     
-    let myNicNameLabel: UILabel = {
+    let myNickNameLabel: UILabel = {
         let label = UILabel()
         label.text = "하둘셋넷다엿일여홉열하둘"
         label.font = UIFont(name: "KCC-Ganpan", size: 26)
@@ -39,7 +39,7 @@ class StartView: UIView {
         return imageView
     }()
     
-    let coupleNicNameLabel: UILabel = {
+    let coupleNickNameLabel: UILabel = {
         let label = UILabel()
         label.text = "123456789101"
         label.font = UIFont(name: "KCC-Ganpan", size: 26)
@@ -72,9 +72,9 @@ class StartView: UIView {
     
     func setUpUI() {
         self.addSubview(startLabel)
-        self.addSubview(myNicNameLabel)
+        self.addSubview(myNickNameLabel)
         self.addSubview(heartImage)
-        self.addSubview(coupleNicNameLabel)
+        self.addSubview(coupleNickNameLabel)
         self.addSubview(startButton)
         
         startLabel.snp.makeConstraints { make in
@@ -85,7 +85,7 @@ class StartView: UIView {
             make.height.equalTo(72)
         }
         
-        myNicNameLabel.snp.makeConstraints { make in
+        myNickNameLabel.snp.makeConstraints { make in
             make.top.equalTo(startLabel.snp.bottom).offset(144)
             make.right.left.equalToSuperview() // 12글자 잘려서 넓이,왼쪽 수정
             make.centerX.equalToSuperview()
@@ -93,14 +93,12 @@ class StartView: UIView {
         }
         
         heartImage.snp.makeConstraints { make in
-            make.top.equalTo(myNicNameLabel.snp.bottom).offset(8)
+            make.top.equalTo(myNickNameLabel.snp.bottom).offset(8)
             make.width.height.equalTo(52)
-//            make.left.equalTo(myNicNameLabel.snp.left).offset(20)
-//            make.right.equalTo(myNicNameLabel.snp.right).offset(-20)
             make.centerX.equalToSuperview()
         }
         
-        coupleNicNameLabel.snp.makeConstraints { make in
+        coupleNickNameLabel.snp.makeConstraints { make in
             make.top.equalTo(heartImage.snp.bottom).offset(8)
             make.right.left.equalToSuperview() // 12글자 잘려서 넓이,왼쪽 수정
             make.centerX.equalToSuperview()

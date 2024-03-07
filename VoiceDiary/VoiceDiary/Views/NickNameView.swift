@@ -1,5 +1,5 @@
 //
-//  NicName.swift
+//  NickName.swift
 //  VoiceDiary
 //
 //  Created by 최민경 on 3/5/24.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class NicNameView: UIView {
+class NickNameView: UIView {
     
     let nickNameLabel: UILabel = {
         let label = UILabel()

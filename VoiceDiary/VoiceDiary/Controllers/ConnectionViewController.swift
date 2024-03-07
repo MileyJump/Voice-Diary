@@ -23,7 +23,13 @@ class ConnectionViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setUpNaVi()
+        connectionView.codeInPutTextField.becomeFirstResponder()
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        connectionView.codeInPutTextField.resignFirstResponder()
+    }
+    
     
     func setUpNaVi(){
         self.navigationItem.hidesBackButton = true

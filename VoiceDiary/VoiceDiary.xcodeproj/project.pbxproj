@@ -21,8 +21,8 @@
 		B057CA9B2B96EFFF001FC2DE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B057CA9A2B96EFFF001FC2DE /* SnapKit */; };
 		B057CA9D2B96EFFF001FC2DE /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B057CA9C2B96EFFF001FC2DE /* SnapKit-Dynamic */; };
 		B057CA9F2B96F401001FC2DE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057CA9E2B96F401001FC2DE /* SignUpViewController.swift */; };
-		B057CAA12B970DEE001FC2DE /* NicNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057CAA02B970DEE001FC2DE /* NicNameView.swift */; };
-		B057CAA32B971042001FC2DE /* NicNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057CAA22B971042001FC2DE /* NicNameViewController.swift */; };
+		B057CAA12B970DEE001FC2DE /* NickNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057CAA02B970DEE001FC2DE /* NickNameView.swift */; };
+		B057CAA32B971042001FC2DE /* NickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057CAA22B971042001FC2DE /* NickNameViewController.swift */; };
 		B05B6E0B2B96DEEC0019F4F2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B6E0A2B96DEEC0019F4F2 /* SignUpView.swift */; };
 		B0CF0B172B97529F006433D4 /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF0B162B97529F006433D4 /* ConnectionView.swift */; };
 		B0CF0B192B975303006433D4 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF0B182B975303006433D4 /* ConnectionViewController.swift */; };
@@ -44,8 +44,8 @@
 		B0577D6C2B95BCA900513169 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		B0577D6E2B95DDE400513169 /* NameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
 		B057CA9E2B96F401001FC2DE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		B057CAA02B970DEE001FC2DE /* NicNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicNameView.swift; sourceTree = "<group>"; };
-		B057CAA22B971042001FC2DE /* NicNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicNameViewController.swift; sourceTree = "<group>"; };
+		B057CAA02B970DEE001FC2DE /* NickNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameView.swift; sourceTree = "<group>"; };
+		B057CAA22B971042001FC2DE /* NickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewController.swift; sourceTree = "<group>"; };
 		B05B6E0A2B96DEEC0019F4F2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B0CF0B162B97529F006433D4 /* ConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
 		B0CF0B182B975303006433D4 /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				B05B6E0A2B96DEEC0019F4F2 /* SignUpView.swift */,
-				B057CAA02B970DEE001FC2DE /* NicNameView.swift */,
+				B057CAA02B970DEE001FC2DE /* NickNameView.swift */,
 				B0CF0B162B97529F006433D4 /* ConnectionView.swift */,
 				B03167362B9857F200AEEBBB /* StartView.swift */,
 			);
@@ -125,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				B057CA9E2B96F401001FC2DE /* SignUpViewController.swift */,
-				B057CAA22B971042001FC2DE /* NicNameViewController.swift */,
+				B057CAA22B971042001FC2DE /* NickNameViewController.swift */,
 				B0CF0B182B975303006433D4 /* ConnectionViewController.swift */,
 				B03167382B9858DD00AEEBBB /* StartViewController.swift */,
 				B02099DC2B8C7326009CCD97 /* HomeViewController.swift */,
@@ -234,11 +234,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B057CAA12B970DEE001FC2DE /* NicNameView.swift in Sources */,
+				B057CAA12B970DEE001FC2DE /* NickNameView.swift in Sources */,
 				B03167392B9858DD00AEEBBB /* StartViewController.swift in Sources */,
 				B02099DD2B8C7326009CCD97 /* HomeViewController.swift in Sources */,
 				B0CF0B172B97529F006433D4 /* ConnectionView.swift in Sources */,
-				B057CAA32B971042001FC2DE /* NicNameViewController.swift in Sources */,
+				B057CAA32B971042001FC2DE /* NickNameViewController.swift in Sources */,
 				B05B6E0B2B96DEEC0019F4F2 /* SignUpView.swift in Sources */,
 				B03167372B9857F200AEEBBB /* StartView.swift in Sources */,
 				B057CA9F2B96F401001FC2DE /* SignUpViewController.swift in Sources */,
