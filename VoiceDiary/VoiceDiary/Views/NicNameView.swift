@@ -62,6 +62,7 @@ class NicNameView: UIView {
         button.backgroundColor = UIColor(hexCode: "#F1EAE4")
         button.setTitleColor(UIColor(hexCode: "#D5C6B9"), for: .normal)
         button.layer.cornerRadius = 13
+        button.isUserInteractionEnabled = false
         return button
     }()
     

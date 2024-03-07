@@ -46,14 +46,13 @@ extension NicNameViewController: UITextFieldDelegate {
             nicNameView.countLabel.text = "\(textCount)/12"
         }
         
-        if nicNameView.nickNameTextField.text?.count != 0 {
+        if nicNameView.nickNameTextField.text?.isEmpty == false {
             nicNameView.nextButton.backgroundColor = UIColor(hexCode: "#604937")
             nicNameView.nextButton.setTitleColor(.white, for: .normal)
-        } else if nicNameView.nickNameTextField.text?.count == 0 {
+            nicNameView.nextButton.isUserInteractionEnabled = true
+        } else {
             nicNameView.nextButton.backgroundColor = UIColor(hexCode: "#F1EAE4")
+            nicNameView.nextButton.isUserInteractionEnabled = false
         }
-        
-        print("textFieldDidChangeSelection")
     }
-    
 }

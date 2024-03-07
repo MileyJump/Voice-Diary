@@ -79,6 +79,7 @@ class ConnectionView: UIView {
         //        button.backgroundColor = Color.buttonColor
         button.backgroundColor = UIColor(hexCode: "#E6DAD1")
         button.layer.cornerRadius = 12
+        button.isUserInteractionEnabled = false
         return button
     }()
     
@@ -98,6 +99,7 @@ class ConnectionView: UIView {
         //        button.backgroundColor = Color.unTouchedColor
         button.backgroundColor = UIColor(hexCode: "#F1EAE4")
         button.layer.cornerRadius = 13
+        button.isUserInteractionEnabled = false
         return button
     }()
     
