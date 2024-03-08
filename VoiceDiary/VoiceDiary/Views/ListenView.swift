@@ -19,8 +19,8 @@ class ListenView: UIView {
     
     private let giftBoxImage: UIImageView = {
         let imageView = UIImageView()
-        //        imageView.image = UIImage(named: "")
-        imageView.backgroundColor = .gray
+        imageView.image = UIImage(named: "GiftBox")
+        imageView.backgroundColor = .clear
         return imageView
     }()
     
@@ -48,22 +48,33 @@ class ListenView: UIView {
         return button
     }()
     
+    
+    let voiceProgress: UIProgressView = {
+        let progress = UIProgressView()
+        progress.trackTintColor = UIColor(hexCode: "#F1EAE4")
+        progress.progressTintColor = UIColor(hexCode: "#604937")
+        return progress
+    }()
+    
     let playButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "play.circle"), for: .normal)
         button.tintColor = UIColor(hexCode: "#604937")
+        let imageConfiguration = UIImage.SymbolConfiguration(pointSize: 60, weight: .light)
+        let image = UIImage(systemName: "play.circle.fill", withConfiguration: imageConfiguration)
+        button.setImage(image, for: .normal)
         return button
     
     }()
     
-//    let replyButton: UIButton = {
-//        let button = UIButton()
-//        button.setTitle("답장 녹음하기", for: .normal)
-//        button.setTitleColor(UIColor(hexCode: "#604937"), for: .normal)
-//        button.backgroundColor = UIColor(hexCode: "#E6DAD1")
-//        
-//        return button
-//    }()
+    
+    let replyButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("답장 녹음하기", for: .normal)
+        button.setTitleColor(UIColor(hexCode: "#604937"), for: .normal)
+        button.backgroundColor = UIColor(hexCode: "#E6DAD1")
+        
+        return button
+    }()
     
   
     override init(frame: CGRect) {
@@ -83,7 +94,10 @@ class ListenView: UIView {
         self.addSubview(titleLabel)
         self.addSubview(nickNameLabel)
         self.addSubview(heartButton)
+        self.addSubview(voiceProgress)
         self.addSubview(playButton)
+        self.addSubview(replyButton)
+        
         
         giftBoxView.snp.makeConstraints { make in
             make.top.equalTo(104)
@@ -120,11 +134,28 @@ class ListenView: UIView {
             make.top.equalTo(titleLabel.snp.top).offset(19)
             make.right.equalTo(giftBoxView.snp.right).offset(-5)
         }
+        
+        voiceProgress.snp.makeConstraints { make in
+            make.width.equalTo(311)
+            make.height.equalTo(6)
+            make.top.equalTo(nickNameLabel.snp.bottom).offset(37)
+//            make.left.equalTo(nickNameLabel.snp.left).offset(2)
+            make.left.equalTo(giftBoxView.snp.left)
+            make.right.equalTo(giftBoxView.snp.right)
+        }
         // MARK: - top 수정
 
         playButton.snp.makeConstraints { make in
             make.height.width.equalTo(72)
             make.top.equalTo(nickNameLabel.snp.bottom).offset(91)
+            make.centerX.equalToSuperview()
+        }
+        
+        replyButton.snp.makeConstraints { make in
+            make.top.equalTo(playButton.snp.bottom).offset(34)
+            make.width.equalTo(129)
+            make.height.equalTo(44)
+//            make.left.equalTo(123)
             make.centerX.equalToSuperview()
         }
     }

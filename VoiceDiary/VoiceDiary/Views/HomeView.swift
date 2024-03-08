@@ -12,8 +12,8 @@ final class HomeView: UIView {
     
     private let giftBoxImage: UIImageView = {
         let imageView = UIImageView()
-        //        imageView.image = UIImage(named: "")
-        imageView.backgroundColor = .gray
+        imageView.image = UIImage(named: "GiftBox")
+        imageView.backgroundColor = .clear
         return imageView
     }()
     

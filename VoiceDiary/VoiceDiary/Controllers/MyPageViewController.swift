@@ -10,11 +10,13 @@ import UIKit
 
 class MyPageViewController: UIViewController{
     
+    let myPageView = MyPageView()
+    
     // MARK: - Initial Method
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        view = myPageView
     }
 }

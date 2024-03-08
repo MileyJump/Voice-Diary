@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabBarController = UITabBarController()
         
         let viewController = UINavigationController(rootViewController: HomeViewController())
-        let listViewController = UINavigationController(rootViewController: ListenViewController())
+        let listViewController = UINavigationController(rootViewController: ListViewController())
         let myPageViewController = UINavigationController(rootViewController: MyPageViewController())
         
         tabBarController.setViewControllers([viewController, listViewController, myPageViewController], animated: true)
@@ -32,7 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         tabBarController.tabBar.tintColor = UIColor(hexCode: "#604937")
         
         if let items = tabBarController.tabBar.items {
-            items[0].image = UIImage(systemName: "heart.fill")
+            items[0].image = UIImage(named: "Home")
             items[0].title = "홈"
             
             items[1].image = UIImage(systemName: "mic.fill")

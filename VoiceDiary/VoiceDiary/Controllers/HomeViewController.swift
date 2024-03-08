@@ -17,8 +17,15 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         view = homeView
 
+        setUpNaviBar()
         setUpAddTarget()
     }
+    
+    func setUpNaviBar(){
+        self.navigationItem.backButtonTitle = ""
+       
+    }
+    
     
     func setUpAddTarget(){
         homeView.listenButton.addTarget(self, action: #selector(listenButtonTapped), for: .touchUpInside)
