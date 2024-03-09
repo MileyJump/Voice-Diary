@@ -25,8 +25,6 @@
 		B03167392B9858DD00AEEBBB /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03167382B9858DD00AEEBBB /* StartViewController.swift */; };
 		B0577D6D2B95BCA900513169 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0577D6C2B95BCA900513169 /* MyPageViewController.swift */; };
 		B0577D6F2B95DDE400513169 /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0577D6E2B95DDE400513169 /* NameSpace.swift */; };
-		B057CA9B2B96EFFF001FC2DE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B057CA9A2B96EFFF001FC2DE /* SnapKit */; };
-		B057CA9D2B96EFFF001FC2DE /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B057CA9C2B96EFFF001FC2DE /* SnapKit-Dynamic */; };
 		B057CA9F2B96F401001FC2DE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057CA9E2B96F401001FC2DE /* SignUpViewController.swift */; };
 		B057CAA12B970DEE001FC2DE /* NickNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057CAA02B970DEE001FC2DE /* NickNameView.swift */; };
 		B057CAA32B971042001FC2DE /* NickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057CAA22B971042001FC2DE /* NickNameViewController.swift */; };
@@ -34,6 +32,8 @@
 		B0CF0B172B97529F006433D4 /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF0B162B97529F006433D4 /* ConnectionView.swift */; };
 		B0CF0B192B975303006433D4 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF0B182B975303006433D4 /* ConnectionViewController.swift */; };
 		B0CF0B1B2B975999006433D4 /* KCC-Ganpan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0CF0B1A2B975999006433D4 /* KCC-Ganpan.ttf */; };
+		B0FFF0B22B9C478A0075481D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B0FFF0B12B9C478A0075481D /* SnapKit */; };
+		B0FFF0B42B9C81570075481D /* ImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FFF0B32B9C81570075481D /* ImagesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +64,7 @@
 		B0CF0B162B97529F006433D4 /* ConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
 		B0CF0B182B975303006433D4 /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 		B0CF0B1A2B975999006433D4 /* KCC-Ganpan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KCC-Ganpan.ttf"; sourceTree = "<group>"; };
+		B0FFF0B32B9C81570075481D /* ImagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B057CA9B2B96EFFF001FC2DE /* SnapKit in Frameworks */,
-				B057CA9D2B96EFFF001FC2DE /* SnapKit-Dynamic in Frameworks */,
+				B0FFF0B22B9C478A0075481D /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +120,7 @@
 		B0577D712B95EDFE00513169 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B0FFF0B32B9C81570075481D /* ImagesManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,8 +194,7 @@
 			);
 			name = VoiceDiary;
 			packageProductDependencies = (
-				B057CA9A2B96EFFF001FC2DE /* SnapKit */,
-				B057CA9C2B96EFFF001FC2DE /* SnapKit-Dynamic */,
+				B0FFF0B12B9C478A0075481D /* SnapKit */,
 			);
 			productName = VoiceDiary;
 			productReference = B02099D52B8C7326009CCD97 /* VoiceDiary.app */;
@@ -225,7 +225,7 @@
 			);
 			mainGroup = B02099CC2B8C7326009CCD97;
 			packageReferences = (
-				B057CA992B96EFFF001FC2DE /* XCRemoteSwiftPackageReference "SnapKit" */,
+				B0FFF0B02B9C478A0075481D /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = B02099D62B8C7326009CCD97 /* Products */;
 			projectDirPath = "";
@@ -264,6 +264,7 @@
 				B0CF0B172B97529F006433D4 /* ConnectionView.swift in Sources */,
 				B02130C22B9A16FA00978BBA /* ListenView.swift in Sources */,
 				B057CAA32B971042001FC2DE /* NickNameViewController.swift in Sources */,
+				B0FFF0B42B9C81570075481D /* ImagesManager.swift in Sources */,
 				B02130C82B9AD85900978BBA /* ListView.swift in Sources */,
 				B05B6E0B2B96DEEC0019F4F2 /* SignUpView.swift in Sources */,
 				B03167372B9857F200AEEBBB /* StartView.swift in Sources */,
@@ -490,7 +491,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B057CA992B96EFFF001FC2DE /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		B0FFF0B02B9C478A0075481D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -501,15 +502,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B057CA9A2B96EFFF001FC2DE /* SnapKit */ = {
+		B0FFF0B12B9C478A0075481D /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B057CA992B96EFFF001FC2DE /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = B0FFF0B02B9C478A0075481D /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		B057CA9C2B96EFFF001FC2DE /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B057CA992B96EFFF001FC2DE /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

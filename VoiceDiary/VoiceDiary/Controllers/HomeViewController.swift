@@ -16,14 +16,17 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = homeView
-
-        setUpNaviBar()
+        
         setUpAddTarget()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setUpNaviBar()
     }
     
     func setUpNaviBar(){
         self.navigationItem.backButtonTitle = ""
-       
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     

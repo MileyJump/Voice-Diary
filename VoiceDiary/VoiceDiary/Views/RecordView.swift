@@ -10,6 +10,7 @@ import UIKit
 
 class RecordView: UIView {
     
+    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "답장 녹음하기"
@@ -19,13 +20,16 @@ class RecordView: UIView {
     }()
     
     
-    let recordTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "굥톨346님의 메세지"
-        label.font = UIFont(name: "KCC-Ganpan", size: 17)
-        label.textColor = UIColor(hexCode: "#604937")
-        label.backgroundColor = .green
-        return label
+    let titleTextField: UITextField = {
+        let textField = UITextField()
+        textField.backgroundColor = .clear
+        textField.placeholder = "굥톨345님의 메세지"
+        textField.font = UIFont(name: "KCC-Ganpan", size: 17)
+        textField.textColor = UIColor(hexCode: "#604937")
+        let NSAttributedString = NSAttributedString(string: "굥톨345님의 메세지", attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexCode: "#604937")])
+        textField.attributedPlaceholder = NSAttributedString
+//        textField.backgroundColor = .green
+        return textField
     }()
     
     let editButton: UIButton = {
@@ -102,7 +106,7 @@ class RecordView: UIView {
     
     func setUpUI(){
         self.addSubview(titleLabel)
-        self.addSubview(recordTitleLabel)
+        self.addSubview(titleTextField)
         self.addSubview(editButton)
         self.addSubview(soundWaveView)
         self.addSubview(secondLabel)
@@ -118,7 +122,7 @@ class RecordView: UIView {
             make.height.equalTo(20)
         }
         
-        recordTitleLabel.snp.makeConstraints { make in
+        titleTextField.snp.makeConstraints { make in
             make.top.equalTo(80)
             make.height.equalTo(23)
 //            make.width.equalTo(200)
@@ -126,15 +130,15 @@ class RecordView: UIView {
         }
         
         editButton.snp.makeConstraints { make in
-            make.top.equalTo(recordTitleLabel.snp.top).offset(3)
-            make.bottom.equalTo(recordTitleLabel.snp.bottom).offset(-3)
-            make.left.equalTo(recordTitleLabel.snp.right).offset(8)
+            make.top.equalTo(titleTextField.snp.top).offset(3)
+            make.bottom.equalTo(titleTextField.snp.bottom).offset(-3)
+            make.left.equalTo(titleTextField.snp.right).offset(8)
 //            make.height.equalTo(17)
 //            make.width.equalTo(51)
         }
         
         soundWaveView.snp.makeConstraints { make in
-            make.top.equalTo(recordTitleLabel.snp.bottom).offset(12)
+            make.top.equalTo(titleTextField.snp.bottom).offset(12)
             make.left.right.equalToSuperview()
             make.height.equalTo(136)
         }

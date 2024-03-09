@@ -72,7 +72,8 @@ class ListenView: UIView {
         button.setTitle("답장 녹음하기", for: .normal)
         button.setTitleColor(UIColor(hexCode: "#604937"), for: .normal)
         button.backgroundColor = UIColor(hexCode: "#E6DAD1")
-        
+        button.titleLabel?.font = UIFont(name: "KOTRA HOPE", size: 24)
+        button.layer.cornerRadius = 12
         return button
     }()
     
@@ -152,7 +153,7 @@ class ListenView: UIView {
         }
         
         replyButton.snp.makeConstraints { make in
-            make.top.equalTo(playButton.snp.bottom).offset(34)
+            make.top.equalTo(playButton.snp.bottom).offset(40)
             make.width.equalTo(129)
             make.height.equalTo(44)
 //            make.left.equalTo(123)

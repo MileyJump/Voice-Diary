@@ -20,14 +20,13 @@ class ListenViewController: UIViewController {
         super.viewDidLoad()
         view = listenView
         
-        setUpNaviBar()
         setUpAddTarget()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        setUpAddTarget()
+        setUpNaviBar()
     }
     
     func setUpNaviBar() {
@@ -39,6 +38,8 @@ class ListenViewController: UIViewController {
         self.navigationItem.title = "2월 10일 Sat."
         
         self.navigationController?.navigationBar.tintColor = UIColor(hexCode: "#614937")
+        
+        tabBarController?.tabBar.isHidden = true
         
         print("setUpNaviBar")
         
