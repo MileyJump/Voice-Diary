@@ -56,6 +56,26 @@ class ListenView: UIView {
         return progress
     }()
     
+    let timeLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "KCC-Ganpan", size: 14)
+        label.textColor = UIColor(hexCode: "#AC9F92")
+        label.textAlignment = .left
+        label.text = "0:00"
+        return label
+    }()
+    
+    let time2Label: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "KCC-Ganpan", size: 14)
+        label.textColor = UIColor(hexCode: "#AC9F92")
+        label.text = "1:52"
+        label.textAlignment = .right
+        return label
+    }()
+    
+   
+    
     let playButton: UIButton = {
         let button = UIButton()
         button.tintColor = UIColor(hexCode: "#604937")
@@ -96,6 +116,8 @@ class ListenView: UIView {
         self.addSubview(nickNameLabel)
         self.addSubview(heartButton)
         self.addSubview(voiceProgress)
+        self.addSubview(timeLabel)
+        self.addSubview(time2Label)
         self.addSubview(playButton)
         self.addSubview(replyButton)
         
@@ -144,6 +166,21 @@ class ListenView: UIView {
             make.left.equalTo(giftBoxView.snp.left)
             make.right.equalTo(giftBoxView.snp.right)
         }
+        
+        timeLabel.snp.makeConstraints { make in
+            make.width.equalTo(100)
+            make.height.equalTo(19)
+            make.top.equalTo(voiceProgress.snp.bottom).offset(13)
+            make.left.equalTo(voiceProgress.snp.left).offset(2)
+        }
+        
+        time2Label.snp.makeConstraints { make in
+            make.width.equalTo(100)
+            make.height.equalTo(19)
+            make.top.equalTo(voiceProgress.snp.bottom).offset(13)
+            make.right.equalTo(voiceProgress.snp.right).offset(-2)
+        }
+        
         // MARK: - top 수정
 
         playButton.snp.makeConstraints { make in
