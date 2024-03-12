@@ -34,6 +34,8 @@
 		B0CF0B1B2B975999006433D4 /* KCC-Ganpan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0CF0B1A2B975999006433D4 /* KCC-Ganpan.ttf */; };
 		B0FFF0B22B9C478A0075481D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B0FFF0B12B9C478A0075481D /* SnapKit */; };
 		B0FFF0B42B9C81570075481D /* ImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FFF0B32B9C81570075481D /* ImagesManager.swift */; };
+		B0FFF0B62B9F2C6A0075481D /* MessageWaitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FFF0B52B9F2C6A0075481D /* MessageWaitView.swift */; };
+		B0FFF0B82B9F2E140075481D /* MessageWaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FFF0B72B9F2E140075481D /* MessageWaitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,8 @@
 		B0CF0B182B975303006433D4 /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 		B0CF0B1A2B975999006433D4 /* KCC-Ganpan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KCC-Ganpan.ttf"; sourceTree = "<group>"; };
 		B0FFF0B32B9C81570075481D /* ImagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesManager.swift; sourceTree = "<group>"; };
+		B0FFF0B52B9F2C6A0075481D /* MessageWaitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageWaitView.swift; sourceTree = "<group>"; };
+		B0FFF0B72B9F2E140075481D /* MessageWaitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageWaitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,7 @@
 				B02130C72B9AD85900978BBA /* ListView.swift */,
 				B02130C92B9AD8ED00978BBA /* MyPageView.swift */,
 				B02130C12B9A16FA00978BBA /* ListenView.swift */,
+				B0FFF0B52B9F2C6A0075481D /* MessageWaitView.swift */,
 				B02130CB2B9B40A900978BBA /* RecordView.swift */,
 			);
 			path = Views;
@@ -152,6 +157,7 @@
 				B02130C32B9A174100978BBA /* ListenViewController.swift */,
 				B02130C52B9AD85000978BBA /* ListViewController.swift */,
 				B0577D6C2B95BCA900513169 /* MyPageViewController.swift */,
+				B0FFF0B72B9F2E140075481D /* MessageWaitViewController.swift */,
 				B02130CD2B9B4B6000978BBA /* RecordViewController.swift */,
 			);
 			path = Controllers;
@@ -259,6 +265,7 @@
 				B057CAA12B970DEE001FC2DE /* NickNameView.swift in Sources */,
 				B03167392B9858DD00AEEBBB /* StartViewController.swift in Sources */,
 				B02130CE2B9B4B6000978BBA /* RecordViewController.swift in Sources */,
+				B0FFF0B62B9F2C6A0075481D /* MessageWaitView.swift in Sources */,
 				B02099DD2B8C7326009CCD97 /* HomeViewController.swift in Sources */,
 				B02130C02B9A0E9900978BBA /* HomeView.swift in Sources */,
 				B0CF0B172B97529F006433D4 /* ConnectionView.swift in Sources */,
@@ -276,6 +283,7 @@
 				B0CF0B192B975303006433D4 /* ConnectionViewController.swift in Sources */,
 				B02099DB2B8C7326009CCD97 /* SceneDelegate.swift in Sources */,
 				B0577D6F2B95DDE400513169 /* NameSpace.swift in Sources */,
+				B0FFF0B82B9F2E140075481D /* MessageWaitViewController.swift in Sources */,
 				B02130CA2B9AD8ED00978BBA /* MyPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

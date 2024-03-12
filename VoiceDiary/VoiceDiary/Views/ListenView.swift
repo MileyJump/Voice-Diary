@@ -48,7 +48,6 @@ class ListenView: UIView {
         return button
     }()
     
-    
     let voiceProgress: UIProgressView = {
         let progress = UIProgressView()
         progress.trackTintColor = UIColor(hexCode: "#F1EAE4")
@@ -56,7 +55,7 @@ class ListenView: UIView {
         return progress
     }()
     
-    let timeLabel: UILabel = {
+    let currentTimeLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "KCC-Ganpan", size: 14)
         label.textColor = UIColor(hexCode: "#AC9F92")
@@ -65,7 +64,7 @@ class ListenView: UIView {
         return label
     }()
     
-    let time2Label: UILabel = {
+    let endTimeLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "KCC-Ganpan", size: 14)
         label.textColor = UIColor(hexCode: "#AC9F92")
@@ -73,8 +72,6 @@ class ListenView: UIView {
         label.textAlignment = .right
         return label
     }()
-    
-   
     
     let playButton: UIButton = {
         let button = UIButton()
@@ -86,7 +83,6 @@ class ListenView: UIView {
     
     }()
     
-    
     let replyButton: UIButton = {
         let button = UIButton()
         button.setTitle("답장 녹음하기", for: .normal)
@@ -97,8 +93,7 @@ class ListenView: UIView {
         return button
     }()
     
-  
-    override init(frame: CGRect) {
+      override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = Color.mainBackgroundcolor
         
@@ -116,8 +111,8 @@ class ListenView: UIView {
         self.addSubview(nickNameLabel)
         self.addSubview(heartButton)
         self.addSubview(voiceProgress)
-        self.addSubview(timeLabel)
-        self.addSubview(time2Label)
+        self.addSubview(currentTimeLabel)
+        self.addSubview(endTimeLabel)
         self.addSubview(playButton)
         self.addSubview(replyButton)
         
@@ -167,14 +162,14 @@ class ListenView: UIView {
             make.right.equalTo(giftBoxView.snp.right)
         }
         
-        timeLabel.snp.makeConstraints { make in
+        currentTimeLabel.snp.makeConstraints { make in
             make.width.equalTo(100)
             make.height.equalTo(19)
             make.top.equalTo(voiceProgress.snp.bottom).offset(13)
             make.left.equalTo(voiceProgress.snp.left).offset(2)
         }
         
-        time2Label.snp.makeConstraints { make in
+        endTimeLabel.snp.makeConstraints { make in
             make.width.equalTo(100)
             make.height.equalTo(19)
             make.top.equalTo(voiceProgress.snp.bottom).offset(13)
@@ -185,7 +180,7 @@ class ListenView: UIView {
 
         playButton.snp.makeConstraints { make in
             make.height.width.equalTo(72)
-            make.top.equalTo(nickNameLabel.snp.bottom).offset(91)
+            make.top.equalTo(currentTimeLabel.snp.bottom).offset(16)
             make.centerX.equalToSuperview()
         }
         

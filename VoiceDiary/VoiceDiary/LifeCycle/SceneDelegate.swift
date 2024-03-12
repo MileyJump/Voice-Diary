@@ -23,7 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationVC = UINavigationController(rootViewController: signUpViewController)
         let tabBarController = UITabBarController()
         
-        let viewController = UINavigationController(rootViewController: HomeViewController())
+//        let homeviewController = UINavigationController(rootViewController: HomeViewController())
+        let viewController = UINavigationController(rootViewController: MessageWaitViewController())
         let listViewController = UINavigationController(rootViewController: ListViewController())
         let myPageViewController = UINavigationController(rootViewController: MyPageViewController())
         
