@@ -23,12 +23,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationVC = UINavigationController(rootViewController: signUpViewController)
         let tabBarController = UITabBarController()
         
-//        let homeviewController = UINavigationController(rootViewController: HomeViewController())
-        let viewController = UINavigationController(rootViewController: MessageWaitViewController())
+        let homeviewController = UINavigationController(rootViewController: HomeViewController())
+//        let viewController = UINavigationController(rootViewController: MessageWaitViewController())
         let listViewController = UINavigationController(rootViewController: ListViewController())
         let myPageViewController = UINavigationController(rootViewController: MyPageViewController())
         
-        tabBarController.setViewControllers([viewController, listViewController, myPageViewController], animated: true)
+        tabBarController.setViewControllers([homeviewController, listViewController, myPageViewController], animated: true)
         
         tabBarController.tabBar.tintColor = UIColor(hexCode: "#604937")
         
