@@ -49,6 +49,14 @@ class ListView: UIView {
         return stackView
     }()
     
+    let listTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.backgroundColor = .clear
+//        tableView.separatorStyle = .singleLine
+        tableView.separatorInset.left = 0
+        return tableView
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = Color.mainBackgroundcolor
@@ -66,27 +74,35 @@ class ListView: UIView {
         buttonStackView.addArrangedSubview(youButton)
         
         self.addSubview(buttonStackView)
+        self.addSubview(listTableView)
         
         allButton.snp.makeConstraints { make in
             make.width.equalTo(42)
             make.height.equalTo(21)
         }
-//        
+        
         meButton.snp.makeConstraints { make in
             make.width.equalTo(28)
             make.height.equalTo(21)
         }
-//        
+        
         youButton.snp.makeConstraints { make in
             make.width.equalTo(52)
             make.height.equalTo(21)
         }
-//        
+        
         buttonStackView.snp.makeConstraints { make in
             make.top.equalTo(100)
             make.centerX.equalToSuperview()
-            
         }
+        
+        listTableView.snp.makeConstraints { make in
+            make.top.equalTo(buttonStackView.snp.bottom).offset(32)
+            make.left.equalTo(32)
+            make.right.equalTo(-32)
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-5)
+        }
+        
         
         
     }

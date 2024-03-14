@@ -29,6 +29,7 @@
 		B057CAA12B970DEE001FC2DE /* NickNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057CAA02B970DEE001FC2DE /* NickNameView.swift */; };
 		B057CAA32B971042001FC2DE /* NickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057CAA22B971042001FC2DE /* NickNameViewController.swift */; };
 		B05B6E0B2B96DEEC0019F4F2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B6E0A2B96DEEC0019F4F2 /* SignUpView.swift */; };
+		B0A970002BA339E800B17D96 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A96FFF2BA339E800B17D96 /* ListTableViewCell.swift */; };
 		B0CF0B172B97529F006433D4 /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF0B162B97529F006433D4 /* ConnectionView.swift */; };
 		B0CF0B192B975303006433D4 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF0B182B975303006433D4 /* ConnectionViewController.swift */; };
 		B0CF0B1B2B975999006433D4 /* KCC-Ganpan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0CF0B1A2B975999006433D4 /* KCC-Ganpan.ttf */; };
@@ -63,6 +64,7 @@
 		B057CAA02B970DEE001FC2DE /* NickNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameView.swift; sourceTree = "<group>"; };
 		B057CAA22B971042001FC2DE /* NickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewController.swift; sourceTree = "<group>"; };
 		B05B6E0A2B96DEEC0019F4F2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		B0A96FFF2BA339E800B17D96 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		B0CF0B162B97529F006433D4 /* ConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
 		B0CF0B182B975303006433D4 /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 		B0CF0B1A2B975999006433D4 /* KCC-Ganpan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KCC-Ganpan.ttf"; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				B05B6E0A2B96DEEC0019F4F2 /* SignUpView.swift */,
+				B0A96FFF2BA339E800B17D96 /* ListTableViewCell.swift */,
 				B057CAA02B970DEE001FC2DE /* NickNameView.swift */,
 				B0CF0B162B97529F006433D4 /* ConnectionView.swift */,
 				B03167362B9857F200AEEBBB /* StartView.swift */,
@@ -270,6 +273,7 @@
 				B02130C02B9A0E9900978BBA /* HomeView.swift in Sources */,
 				B0CF0B172B97529F006433D4 /* ConnectionView.swift in Sources */,
 				B02130C22B9A16FA00978BBA /* ListenView.swift in Sources */,
+				B0A970002BA339E800B17D96 /* ListTableViewCell.swift in Sources */,
 				B057CAA32B971042001FC2DE /* NickNameViewController.swift in Sources */,
 				B0FFF0B42B9C81570075481D /* ImagesManager.swift in Sources */,
 				B02130C82B9AD85900978BBA /* ListView.swift in Sources */,
