@@ -52,7 +52,7 @@ class ListView: UIView {
     let listTableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .clear
-//        tableView.separatorStyle = .singleLine
+        tableView.separatorStyle = .none
         tableView.separatorInset.left = 0
         return tableView
     }()
