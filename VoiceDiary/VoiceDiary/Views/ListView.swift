@@ -78,22 +78,20 @@ class ListView: UIView {
         
         allButton.snp.makeConstraints { make in
             make.width.equalTo(42)
-            make.height.equalTo(21)
         }
         
         meButton.snp.makeConstraints { make in
             make.width.equalTo(28)
-            make.height.equalTo(21)
         }
         
         youButton.snp.makeConstraints { make in
             make.width.equalTo(52)
-            make.height.equalTo(21)
         }
         
         buttonStackView.snp.makeConstraints { make in
             make.top.equalTo(100)
             make.centerX.equalToSuperview()
+            make.height.equalTo(21)
         }
         
         listTableView.snp.makeConstraints { make in

@@ -14,6 +14,8 @@ class ListViewController: UIViewController {
     
     let listView = ListView()
     
+    let listTableViewCell = ListTableViewCell()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view = listView
@@ -27,9 +29,6 @@ class ListViewController: UIViewController {
         
         listView.listTableView.dataSource = self
         listView.listTableView.delegate = self
-        
-//        listView.listTableView.rowHeight = UITableView.automaticDimension
-//        listView.listTableView.estimatedRowHeight = UITableView.automaticDimension
     }
     
     func setUpAddTarget(){
@@ -38,6 +37,8 @@ class ListViewController: UIViewController {
         listView.meButton.addTarget(self, action: #selector(meButtonTapped), for: .touchUpInside)
         
         listView.youButton.addTarget(self, action: #selector(youButtonTapped), for: .touchUpInside)
+        
+        listTableViewCell.heartButton.addTarget(self, action: #selector(heartButtonTapped), for: .touchUpInside)
     }
     
     @objc func allButtonTapped(){
@@ -47,24 +48,25 @@ class ListViewController: UIViewController {
         listView.allButton.backgroundColor = UIColor(hexCode: "#604937")
         listView.meButton.backgroundColor = UIColor(hexCode: "#604937").withAlphaComponent(0.3)
         listView.youButton.backgroundColor = UIColor(hexCode: "#604937").withAlphaComponent(0.3)
-        
     }
     
     @objc func meButtonTapped(){
         print("meButtonTapped")
+        
         listView.meButton.backgroundColor = UIColor(hexCode: "#604937")
         listView.allButton.backgroundColor = UIColor(hexCode: "#604937").withAlphaComponent(0.3)
         listView.youButton.backgroundColor = UIColor(hexCode: "#604937").withAlphaComponent(0.3)
-        
     }
     
     @objc func youButtonTapped(){
         print("youButtonTapped")
-        
         listView.youButton.backgroundColor = UIColor(hexCode: "#604937")
         listView.allButton.backgroundColor =  UIColor(hexCode: "#604937").withAlphaComponent(0.3)
         listView.meButton.backgroundColor =  UIColor(hexCode: "#604937").withAlphaComponent(0.3)
-        
+    }
+    
+    @objc func heartButtonTapped(){
+        print("heartButtonTapped")
     }
 }
 
